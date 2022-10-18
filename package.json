@@ -1,0 +1,23 @@
+{
+  "name": "lime-music",
+  "version": "1.0.0",
+  "description": "青柠音乐",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldniu23/lime-music.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Jinmeng Niu",
+    "email": "1241677287@qq.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oldniu23/lime-music/issues"
+  },
+  "homepage": "https://github.com/oldniu23/lime-music#readme"
+}
