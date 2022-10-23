@@ -6,8 +6,14 @@ class Slider {
         // 拿到对象中的html元素和slides(图片链接等)
         this.$el = options.el; 
         this.slides = options.slides;
+        // 切换时间
+        this.time = options.time || 3000;
+        // 记录第几张图片
+        this.index = 0;
+        // 渲染html
         this.render();
-
+        // 开始轮播
+        this.start();
 
     }
     // 渲染
@@ -26,6 +32,18 @@ class Slider {
                 </a>            
              </div>`
         ).join('')
+    }
 
+    start() {  
+        // 计时器
+        setInterval(this.next.bind(this), this.time);
+      }
+
+    next() {
+        // 每次往左偏移trans
+        this.index += 1;
+        if( this.index === this.slides.length){ this.index = 0};
+        let trans = `-${this.index * 100 / this.slides.length}%`; 
+        this.$wrap.style.transform = `translate(${trans})`;
     }
 }
